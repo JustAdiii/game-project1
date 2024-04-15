@@ -1,1 +1,110 @@
+#game-board {
+  width: 600px;
+  height: 600px;
+  border: 1px solid black;
+  position: relative;
+  overflow: hidden;
+  background: url(../game-project1/images/fon1.jpg);
+}
+#player {
+  width: 50px;
+  height: 50px;
+  background-color: blue;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  background: url(../game-project1/images/ship3.png);
+}
+.bullet {
+  width: 5px;
+  height: 20px;
+  background-color: red;
+  position: absolute;
+  background: url(../game-project1/images/shot2.png);
+}
+.enemy {
+  width: 40px;
+  height: 40px;
+  background-color: green;
+  position: absolute;
+  background: url(../game-project1/images/ship.png);
+}
+#score {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 24px;
+  color: yellow;
+  font-family: Arial, sans-serif;
+  background-color: black;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+#start-button {
+  position: absolute;
+  display: block;
+  width: 50%;
+  padding: 2px 12px 4px;
+  font-family: inherit;
+  font-size: 24px;
+  border: solid 2px #ccc;
+  border-radius: 8px;
+  background-color: #593f6b;
+  color: #fff;
+  cursor: pointer;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
 
+#restart-button {
+  position: absolute;
+  top: 70%; /* Centruje przycisk w pionie */
+  left: 50%; /* Centruje przycisk w poziomie */
+  transform: translate(
+    -50%,
+    -50%
+  ); /* Przesuwa przycisk do tyłu o połowę jego szerokości i wysokości, by środek przycisku był na środku ekranu */
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #593f6b;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#restart-button:hover {
+  background-color: #45a049; /* Ciemniejszy zielony */
+}
+
+#restart-button:active {
+  background-color: #3e8e41; /* Jeszcze ciemniejszy zielony */
+}
+
+#game-over {
+  display: none; /* Initially hide the game-over caption */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 20px;
+  border-radius: 5px;
+  color: white;
+  font-size: 24px;
+  text-align: center;
+}
+
+#win-message {
+  display: none; /* Domyślnie ukryj komunikat o zwycięstwie */
+  position: absolute;
+  top: 50%; /* Wyśrodkuj w pionie */
+  left: 50%; /* Wyśrodkuj w poziomie */
+  transform: translate(-50%, -50%); /* Wyśrodkuj w poziomie i pionie */
+  color: green; /* Kolor tekstu */
+  font-size: 24px; /* Rozmiar czcionki */
+  font-family: Arial, sans-serif; /* Wybierz czcionkę */
+}

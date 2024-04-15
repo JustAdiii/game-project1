@@ -1,1 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Space Defender</title>
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      html {
+        font-family: "consolas";
+      }
+      h1 {
+        text-align: left;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Space Defender</h1>
+    <div id="game-board">
+      <div id="player"></div>
+      <div id="score">0</div>
+      <div id="game-over" style="display: none">Game Over</div>
+      <div id="win-message" style="display: none">You Won!</div>
+      <button id="restart-button" style="display: none">Restart</button>
+      <button id="start-button">Start</button>
+    </div>
 
+    <script src="./src/game.js"></script>
+  </body>
+</html>
