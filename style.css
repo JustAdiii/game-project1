@@ -1,6 +1,7 @@
 #game-board {
   width: 600px;
   height: 600px;
+  margin: 0 auto;
   border: 1px solid black;
   position: relative;
   overflow: hidden;
@@ -108,3 +109,33 @@
   font-size: 24px; /* Rozmiar czcionki */
   font-family: Arial, sans-serif; /* Wybierz czcionkę */
 }
+
+body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  font-family: "consolas";
+  background-color: #000;
+}
+
+#stars {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background: url("https://cdn.jsdelivr.net/gh/jerryor/F2E-resourse/canvas/starrysky/starrysky/starry_sky.svg")
+    repeat top center;
+  animation: animateStars 50s linear infinite;
+}
+
+@keyframes animateStars {
+  from {
+    background-position: 0px 0px;
+  }
+  to {
+    background-position: 0px 10000px;
+  }
+}
+
